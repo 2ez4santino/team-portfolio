@@ -1,6 +1,7 @@
 {
   "name": "team-portfolio",
   "version": "1.0.0",
+  "homepage": "https://2ez4santino.github.io/team-portfolio",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
@@ -9,8 +10,13 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],

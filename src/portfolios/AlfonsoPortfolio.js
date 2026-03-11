@@ -71,7 +71,7 @@ export default function AlfonsoPortfolio() {
             {!imageError ? (
               <img
                 className="team-photo"
-                src="/team/alfonso.jpg"
+                src={`${process.env.PUBLIC_URL}/team/alfonso.jpg`}
                 alt="Alfonso Santino P. Ragadio"
                 onError={() => setImageError(true)}
               />

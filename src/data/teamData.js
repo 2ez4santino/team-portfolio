@@ -5,7 +5,7 @@ export const team = [
     name: 'Alfonso Santino P. Ragadio',
     role: 'Frontend Developer',
     bio: 'A passionate developer focused on building clean and functional web experiences.',
-    image: '/team/alfonso.jpg',
+    image: `${process.env.PUBLIC_URL}/team/alfonso.jpg`,
     initials: 'AR',
     tagline: 'Designing clear interfaces with futuristic energy.',
     summary:
@@ -23,7 +23,7 @@ export const team = [
     name: 'Marcy Angelo Villegas',
     role: 'Web Developer',
     bio: 'Dedicated to crafting efficient solutions and collaborating on innovative projects.',
-    image: '/team/marcy.jpg',
+    image: `${process.env.PUBLIC_URL}/team/marcy.jpg`,
     initials: 'MV',
     tagline: 'Building efficient solutions for modern web experiences.',
     summary:
@@ -41,7 +41,7 @@ export const team = [
     name: 'Rham Ponce',
     role: 'Creative Developer',
     bio: 'Brings creativity and technical skill together to deliver polished, user-friendly applications.',
-    image: '/team/rham.jpg',
+    image: `${process.env.PUBLIC_URL}/team/rham.jpg`,
     initials: 'RP',
     tagline: 'Merging creativity and code into polished digital work.',
     summary:

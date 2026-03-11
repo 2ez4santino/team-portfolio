@@ -1,0 +1,47 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #00fff7;
+  --primary-dark: #00c8c0;
+  --accent: #bf00ff;
+  --accent2: #ff006e;
+  --bg: #020010;
+  --bg-card: #0a0a1f;
+  --bg-nav: rgba(2, 0, 16, 0.93);
+  --text: #f0faff;
+  --text-muted: #a8d8e8;
+  --border: #0d2a3a;
+  --glow: 0 0 12px #00fff7aa, 0 0 30px #00fff730;
+  --glow-accent: 0 0 12px #bf00ffaa, 0 0 30px #bf00ff30;
+  --radius: 10px;
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(0, 255, 247, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 247, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}

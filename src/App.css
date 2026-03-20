@@ -408,6 +408,310 @@
   opacity: 0.9;
 }
 
+.wedding-activity-shell {
+  width: min(420px, 100%);
+  margin-top: 1rem;
+}
+
+.wedding-activity-toggle {
+  list-style: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 255, 247, 0.28);
+  border-radius: 8px;
+  padding: 0.58rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(0, 255, 247, 0.05);
+  text-align: center;
+}
+
+.wedding-activity-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.wedding-activity-shell[open] {
+  width: min(560px, 100%);
+}
+
+.wedding-activity-shell[open] .wedding-activity-toggle {
+  margin-bottom: 0.9rem;
+}
+
+.wedding-invitation {
+  width: 100%;
+  margin-top: 0;
+  padding: 1.75rem 1.7rem;
+  border: 1px solid #dccfb5;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 243, 234, 0.9) 100%),
+    radial-gradient(circle at 20% 18%, rgba(116, 104, 88, 0.06), transparent 45%),
+    radial-gradient(circle at 84% 70%, rgba(116, 104, 88, 0.05), transparent 42%);
+  box-shadow: 0 14px 34px rgba(54, 43, 25, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+  text-align: center;
+  color: #4f3920;
+  position: relative;
+  overflow: hidden;
+}
+
+.wedding-invitation > * {
+  position: relative;
+  z-index: 1;
+}
+
+.wedding-invitation p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.wedding-invitation::before,
+.wedding-invitation::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(138, 119, 89, 0.12), transparent 64%);
+  opacity: 0.38;
+  z-index: 0;
+  filter: blur(0.8px);
+}
+
+.wedding-invitation::before {
+  top: -62px;
+  left: -68px;
+  transform: rotate(-12deg);
+}
+
+.wedding-invitation::after {
+  bottom: -64px;
+  right: -70px;
+  transform: rotate(160deg);
+}
+
+.wedding-geo-frame {
+  position: absolute;
+  inset: 14px;
+  border: 2px solid rgba(202, 159, 85, 0.8);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wedding-geo-frame.frame-one {
+  transform: rotate(-13deg);
+}
+
+.wedding-geo-frame.frame-two {
+  inset: 28px;
+  border-width: 1px;
+  border-color: rgba(202, 159, 85, 0.6);
+  transform: rotate(10deg);
+}
+
+.wedding-rose-cluster {
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(211, 132, 145, 0.68) 0 8%, transparent 9%),
+    radial-gradient(circle at 47% 36%, rgba(228, 163, 174, 0.72) 0 12%, transparent 13%),
+    radial-gradient(circle at 58% 50%, rgba(210, 126, 141, 0.64) 0 9%, transparent 10%),
+    radial-gradient(ellipse at 22% 58%, rgba(109, 124, 108, 0.55) 0 9%, transparent 10%),
+    radial-gradient(ellipse at 70% 70%, rgba(109, 124, 108, 0.5) 0 8%, transparent 9%);
+  opacity: 0.8;
+}
+
+.wedding-rose-cluster::before,
+.wedding-rose-cluster::after {
+  content: '';
+  position: absolute;
+  width: 76px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(117, 126, 116, 0), rgba(117, 126, 116, 0.6), rgba(117, 126, 116, 0));
+}
+
+.wedding-rose-cluster::before {
+  top: 70px;
+  left: 38px;
+  transform: rotate(34deg);
+}
+
+.wedding-rose-cluster::after {
+  top: 88px;
+  left: 26px;
+  transform: rotate(8deg);
+}
+
+.wedding-rose-cluster.rose-top-left {
+  top: 8px;
+  left: 8px;
+}
+
+.wedding-rose-cluster.rose-bottom-right {
+  right: 8px;
+  bottom: 6px;
+  transform: rotate(178deg);
+}
+
+.wedding-invitation .wedding-invitation-kicker {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9b7a47;
+  margin-bottom: 0.55rem;
+}
+
+.wedding-invitation .wedding-invitation-hosts {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #73552e;
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+}
+
+.wedding-invitation .wedding-invitation-title {
+  font-family: 'Baskerville Old Face', 'Palatino Linotype', 'Times New Roman', serif;
+  font-size: clamp(1.42rem, 2.9vw, 2.05rem);
+  letter-spacing: 0.01em;
+  color: #4b3520;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.wedding-invitation-couple {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.9rem;
+}
+
+.wedding-invitation .wedding-invitation-details {
+  color: #684f2f;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.94rem;
+}
+
+.wedding-invitation-rsvp {
+  font-family: var(--font-mono);
+  color: var(--primary);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wedding-rsvp-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.wedding-rsvp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #6d532f;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.wedding-rsvp-field input,
+.wedding-rsvp-field textarea {
+  border: 1px solid #d9c6a0;
+  border-radius: 6px;
+  background: #fffdfa;
+  color: #4f3a22;
+  padding: 0.62rem 0.72rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.wedding-rsvp-field input:focus,
+.wedding-rsvp-field textarea:focus {
+  outline: none;
+  border-color: #b8965e;
+  box-shadow: 0 0 0 3px rgba(184, 150, 94, 0.18);
+}
+
+.wedding-rsvp-choice {
+  border: 1px solid #ddccb0;
+  border-radius: 8px;
+  padding: 0.7rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wedding-rsvp-choice legend {
+  color: #7f643c;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 0.3rem;
+}
+
+.wedding-rsvp-choice label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #6f5531;
+  font-size: 0.85rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.wedding-rsvp-choice input[type='radio'] {
+  accent-color: #b8965e;
+}
+
+.wedding-rsvp-submit {
+  width: fit-content;
+  margin-top: 0.35rem;
+  padding: 0.62rem 1.35rem;
+  border: 1px solid #b1915d;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #f3e5c7 0%, #e7d0a3 100%);
+  color: #4f3a22;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.wedding-rsvp-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(84, 63, 30, 0.2);
+}
+
+.hero .wedding-rsvp-notice {
+  margin: 0.7rem auto 0;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid #8e6f3e;
+  border-radius: 999px;
+  background: #fffdf8;
+  color: #000000;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(80, 58, 24, 0.18);
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-block;
@@ -917,24 +1221,17 @@
 
 /* ── Scanline overlay ── */
 body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 3px,
-    rgba(0, 0, 0, 0.04) 3px,
-    rgba(0, 0, 0, 0.04) 4px
-  );
-  pointer-events: none;
-  z-index: 9999;
+  content: none;
 }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .navbar-links {
     gap: 1.25rem;
+  }
+
+  .wedding-invitation {
+    padding: 1.2rem;
   }
 
   .alfonso-hero,

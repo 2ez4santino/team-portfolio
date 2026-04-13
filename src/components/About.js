@@ -4,6 +4,41 @@ import { team } from '../data/teamData';
 
 function TeamCard({ member }) {
   const [imageError, setImageError] = useState(false);
+  const cardContent = (
+    <div className="card" key={member.name}>
+      <div className="team-avatar team-photo-frame">
+        {!imageError ? (
+          <img
+            className="team-photo"
+            src={member.image}
+            alt={member.name}
+            onError={() => setImageError(true)}
+          />
+        ) : null}
+        {imageError ? <span className="team-initials">{member.initials}</span> : null}
+      </div>
+      <p className="team-name">{member.name}</p>
+      <p className="team-role">{member.role}</p>
+      <p className="team-bio">{member.bio}</p>
+      <div className="team-card-footer">
+        <span className="team-card-cta">Open portfolio ↗</span>
+      </div>
+    </div>
+  );
+
+  if (member.externalUrl) {
+    return (
+      <a
+        className="team-card-link"
+        href={member.externalUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Open ${member.name} portfolio`}
+      >
+        {cardContent}
+      </a>
+    );
+  }
 
   return (
     <Link
@@ -11,25 +46,7 @@ function TeamCard({ member }) {
       to={member.route}
       aria-label={`Open ${member.name} portfolio`}
     >
-      <div className="card" key={member.name}>
-        <div className="team-avatar team-photo-frame">
-          {!imageError ? (
-            <img
-              className="team-photo"
-              src={member.image}
-              alt={member.name}
-              onError={() => setImageError(true)}
-            />
-          ) : null}
-          {imageError ? <span className="team-initials">{member.initials}</span> : null}
-        </div>
-        <p className="team-name">{member.name}</p>
-        <p className="team-role">{member.role}</p>
-        <p className="team-bio">{member.bio}</p>
-        <div className="team-card-footer">
-          <span className="team-card-cta">Open portfolio ↗</span>
-        </div>
-      </div>
+      {cardContent}
     </Link>
   );
 }

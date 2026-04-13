@@ -2,6 +2,7 @@ export const team = [
   {
     slug: 'alfonso-ragadio',
     route: '/portfolio/alfonso-ragadio',
+    externalUrl: 'https://2ez4santino.github.io/my-portfolio/',
     name: 'Alfonso Santino P. Ragadio',
     role: 'Frontend Developer',
     bio: 'A passionate developer focused on building clean and functional web experiences.',
@@ -20,6 +21,7 @@ export const team = [
   {
     slug: 'marcy-villegas',
     route: '/portfolio/marcy-villegas',
+    externalUrl: 'https://marcygelo1.github.io/marcy-portfolio/',
     name: 'Marcy Angelo Villegas',
     role: 'Web Developer',
     bio: 'Dedicated to crafting efficient solutions and collaborating on innovative projects.',
@@ -38,6 +40,7 @@ export const team = [
   {
     slug: 'rham-ponce',
     route: '/portfolio/rham-ponce',
+    externalUrl: 'https://mrrponce1-cmd.github.io/My-portfolio---Ponce/',
     name: 'Rham Ponce',
     role: 'Creative Developer',
     bio: 'Brings creativity and technical skill together to deliver polished, user-friendly applications.',

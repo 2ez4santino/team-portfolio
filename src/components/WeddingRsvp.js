@@ -53,8 +53,8 @@ const photoMoments = [
 ];
 
 const weddingDate = new Date('2026-06-12T16:00:00+08:00');
-const venueQuery = 'Technological Institute of the Philippines Manila, 938 Arlegui St., Quiapo, Manila, Philippines';
-const fallbackVenueCoords = { lat: '14.60016', lon: '120.98757' };
+const venueQuery = '1338 Arlegui St., Quiapo, Manila, Philippines';
+const fallbackVenueCoords = { lat: '14.5965475', lon: '120.9893713' };
 
 function buildEmbedMapUrl(lat, lon) {
   const latitude = Number.parseFloat(lat);
@@ -256,7 +256,7 @@ export default function WeddingRsvp() {
             <div className="wedding-hero-meta">
               <span>{dateLabel}</span>
               <span>4:00 PM Ceremony</span>
-              <span>TIP Manila, 938 Arlegui St., Quiapo, Manila</span>
+              <span>TIP Manila, 1338 Arlegui St., Quiapo, Manila</span>
             </div>
 
           </div>
@@ -293,7 +293,7 @@ export default function WeddingRsvp() {
             <div className="wedding-info-list">
               <div>
                 <span>Location</span>
-                <strong>TIP Manila, 938 Arlegui St., Quiapo, Manila</strong>
+                <strong>TIP Manila, 1338 Arlegui St., Quiapo, Manila</strong>
               </div>
               <div>
                 <span>Reception</span>

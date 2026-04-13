@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
+import WeddingRsvp from './components/WeddingRsvp';
 import AlfonsoPortfolio from './portfolios/AlfonsoPortfolio';
 import MarcyPortfolio from './portfolios/MarcyPortfolio';
 import RhamPortfolio from './portfolios/RhamPortfolio';
@@ -14,6 +15,7 @@ function AnimatedRoutes() {
     <div className="route-transition-shell" key={location.pathname}>
       <Routes location={location}>
         <Route path="/" element={<Home />} />
+        <Route path="/wedding-rsvp" element={<WeddingRsvp />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio/alfonso-ragadio" element={<AlfonsoPortfolio />} />
         <Route path="/portfolio/marcy-villegas" element={<MarcyPortfolio />} />

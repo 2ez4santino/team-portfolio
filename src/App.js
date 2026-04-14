@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <header className="navbar">
-        <span className="navbar-brand">TITLE HERE</span>
+        <span className="navbar-brand">TEAM PORTFOLIO</span>
         <ul className="navbar-links">
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/about">Meet the Team</NavLink></li>

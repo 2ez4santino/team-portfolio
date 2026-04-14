@@ -43,7 +43,7 @@ export const team = [
     externalUrl: 'https://mrrponce1-cmd.github.io/My-portfolio---Ponce/',
     name: 'Rham Ponce',
     role: 'Creative Developer',
-    bio: 'Brings creativity and technical skill together to deliver polished, user-friendly applications.',
+    bio: 'My approach combines technical expertise with an eye for aesthetics, ensuring that every project not only functions flawlessly but also delivers a memorable visual experience.',
     image: `${process.env.PUBLIC_URL}/team/rham.jpg`,
     initials: 'RP',
     tagline: 'Merging creativity and code into polished digital work.',
